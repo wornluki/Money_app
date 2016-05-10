@@ -1,0 +1,125 @@
+
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+	height: 50px;
+	margin-top: 20px;
+	padding: 0 20px 0 20px;
+
+	a {
+	  color: gray;
+	  font-size: 1.5em;
+	  margin: 0;
+	  padding: 0;
+	  letter-spacing: 0.06em
+	}
+}
+
+
+.acme-navbar-text{
+  color: gray;
+  display: flex;
+  align-items: center;
+}
+
+.user_name {
+	@media screen and (max-width: 390px) {
+    display: none;
+  }
+}
+
+.settings {
+	position: absolute;
+	z-index: 1;
+	border: 0px transparent solid;
+	border-radius: 5px;
+	margin-left: -75px;
+	display: none;
+	margin-top: 15px;
+	background-color: $green;
+	padding: 5px 0 5px 0;
+	
+
+	&:before {
+		content: "";
+	    position: absolute;
+	    left: 70%;                         // half way down (vertical center).
+	    margin-top: -15px;                // adjust position, arrow has a height of 30px. 
+	    top:-15px;
+	    border: solid 15px transparent;
+	    border-bottom-color: $green;
+	    z-index: 1;
+
+	    @media screen and (max-width:390px) {
+		display: none;
+	}
+
+	}
+
+	ul {
+
+		-webkit-margin-before: 0em;
+	    -webkit-margin-after: 0em;
+	    -webkit-margin-start: 0px;
+	    -webkit-margin-end: 0px;
+	    -webkit-padding-start: 0px;
+	}
+
+	li a{
+		color: white;
+		padding: 20px;
+		&:hover {
+			background-color: darken($green, 10%);
+		}
+	}
+}
+
+
+
+.menu_item {
+	a {
+		display: flex;
+		align-items: center;
+		font-size: 1em;
+	}
+	span {
+		margin-right: 5px;
+	}
+}
+
+a {
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+	text-decoration: none;
+	list-style: none;
+}
+
+b {
+	color: $green;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0;
+  line-height: 1.25em;
+}
+
+a:hover, a:focus {
+  color: greenyellow;
+}
+
+.circle{
+	border-radius: 50%;
+}
+
+img {
+	width: 30px;
+	margin-left: 30px;
+}

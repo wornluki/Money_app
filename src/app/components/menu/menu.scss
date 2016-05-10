@@ -1,0 +1,89 @@
+.menu {
+	padding: 20px;
+	
+	ul {
+		-webkit-margin-before: 0em;
+	    -webkit-margin-after: 0em;
+	    -webkit-margin-start: 0px;
+	    -webkit-margin-end: 0px;
+	    -webkit-padding-start: 0px;
+	    display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		@media screen and (max-width:390px) {
+			justify-content: space-around;
+		}
+	}
+
+	li {
+		text-transform: uppercase;
+		font-size: 1.2em;
+		color: gray;
+		display: flex;
+		align-items: center;
+		margin-right: 50px;
+
+		&:hover {
+			color: $green;
+		}
+
+		@media screen and (max-width:390px) {
+
+			margin-right:20px;
+			font-size: 2em;
+
+		}
+
+
+
+	}
+
+	span {
+		margin-right: 10px;
+		@media screen and (max-width:390px) {
+			margin-right: 0px;
+	}
+	}
+
+	@media screen and (max-width:390px) {
+		p {
+			display: none;
+		}
+	}
+
+	li.active {
+		font-weight: 900;
+		color: $green;
+		
+		// @media screen and (max-width:390px) {
+		// 	&:after {
+		// 		content: '';
+		// 		position: absolute;
+		// 	    left: 75%;                         // half way down (vertical center).
+		// 	    margin-top: 15px;                // adjust position, arrow has a height of 30px. 
+		// 	    top:145px;
+		// 	    border: solid 15px transparent;
+		// 	    border-top-color: $green;
+		// 	}
+		// }
+	}
+}
+
+
+
+menu {
+	-webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+}
+
+hr {
+	margin: 0 20px 0 20px;
+	@media screen and (max-width:390px) {
+		display: none;
+	}
+}
+
