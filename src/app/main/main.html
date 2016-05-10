@@ -1,14 +1,10 @@
 <div class="history">
-	<ul>
+	<ul ng-repeat="transaction in vm.transactions">
 		<li>
-			<span class="name">Transaction</span>
-			<span class="category">income</span>
-			<span class="price income">$1000.00</span>
+			<span class="name">{{transaction.name}}</span>
+			<span class="category">{{transaction.desc}}</span>
+			<span class="price income">{{transaction.price| currency:"$"}}</span>
 		</li>
-		<li>
-			<span class="name">Allegro</span>
-			<span class="category">online shoping</span>
-			<span class="price expense">$199.99</span>
-		</li>
+
 	</ul>
 </div>

@@ -4,7 +4,6 @@
 
   angular
     .module('web')
-    .constant('malarkey', malarkey)
-    .constant('moment', moment);
-
+    .constant('FIREBASE_URL', "https://money-app-999.firebaseio.com/")
+    .constant('moment', moment)
 })();

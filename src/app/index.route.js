@@ -12,7 +12,13 @@
         url: '/',
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
-        controllerAs: 'main'
+        controllerAs: 'vm',
+        resolve: {
+          transactions: function(firebaseDataService, $firebaseArray) {
+            return $firebaseArray(firebaseDataService.transactions).$loaded();  
+          }
+        }
+
       });
 
     $urlRouterProvider.otherwise('/');
