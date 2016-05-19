@@ -2,8 +2,8 @@
 	<ul ng-repeat="transaction in vm.transactions">
 		<li>
 			<span class="name">{{transaction.name}}</span>
-			<span class="category">{{transaction.desc}}</span>
-			<span class="price income">{{transaction.price| currency:"$"}}</span>
+			<span class="category">{{transaction.category}}</span>
+			<span ng-class="{'income' : transaction.price > 0 , 'expense' : transaction.price < 0}" class="price">{{transaction.price| currency:"$"}}</span>
 		</li>
 
 	</ul>

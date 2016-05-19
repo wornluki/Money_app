@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "money-app-999",
+    "money-ap": "money-app-999",
+    "money_app": "money-app-999"
+  }
+}
