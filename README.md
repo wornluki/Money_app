@@ -1,18 +1,18 @@
-Opis
-Aplikacja służy do zarządzania budżetem.
+#About
+Budget managment app for study project.
 
-Wykorzystane technologie:
+#Used technology:
 - AngularJS
 - Firebase
 
 
 #TODO:
 
-[x] Backend via Firebase
-[x] Good front-end look
-[x] Adding data
-[ ] Model Data
-[ ] Assign data to user
-[ ] Login
-[ ] Sorting
-[ ] Safety
+- [x] Backend via Firebase
+- [x] Good front-end look
+- [x] Adding data
+- [ ] Model Data
+- [ ] Assign data to user
+- [ ] Login
+- [ ] Sorting
+- [ ] Safety
