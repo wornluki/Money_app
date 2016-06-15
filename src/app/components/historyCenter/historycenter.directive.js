@@ -23,26 +23,45 @@
 
       vm.removeCustomClass = removeCustomClass;
       vm.addCustomClass = addCustomClass;
-      vm.addItem = addItem;
+      vm.addIncome = addIncome;
+      vm.addExpense = addExpense;
 
       function removeCustomClass() {
         angular.element(document.querySelector("#panel")).removeClass("hidden");
       }
       function addCustomClass() {
         angular.element(document.querySelector("#panel")).addClass("hidden");
-
+        clear()
       }
 
-      function addItem() {
+      function addIncome() {
         var iRef = firebaseDataService.transactions;
- 
+    
         iRef.child(vm.name).set({
           name: vm.name,
           category: vm.category,
           price: vm.price
         })
 
-        vm.text = "";
+        addCustomClass()
+      }
+
+      function addExpense() {
+        var iRef = firebaseDataService.transactions;
+ 
+        iRef.child(vm.name).set({
+          name: vm.name,
+          category: vm.category,
+          price: "-" + vm.price
+        })
+
+        addCustomClass()
+      }
+
+      function clear() {
+        vm.name = ""
+        vm.category = ""
+        vm.price = ""
       }
     }
   }

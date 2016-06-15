@@ -11,7 +11,6 @@
 
     vm.transactions = transactions;
     console.log(transactions);
-    console.log(transactions.length);
     
   }
 })();

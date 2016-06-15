@@ -6,8 +6,12 @@
 //VARS:
 $green: #24BA83;
 $red: #FB5557;
+$text-color: #090909;
+$text-color_light: #a0a0a0;
+
 
 @import 'main/main';
+@import 'login/login';
 @import 'scss/0-tools/font-awesome-4.4.0/font-awesome';
 @import 'scss/0-tools/normalize.scss';
 @import 'scss/0-tools/fonts.scss';

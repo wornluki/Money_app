@@ -12,11 +12,20 @@
 	<div class="add_form">
 		<span class="fa fa-times" ng-click="vm.addCustomClass()"></span>
 		<div class="form">
-			<input type="text" ng-model="vm.name">
-			<input type="text" ng-model="vm.category">
-			<input type="text" ng-model="vm.price">
-			<button ng-click="vm.addItem()">Income</button>
-			<button>Expense</button>
+			<div class="inputs">
+				<label class="label_inputs"> Name </label>
+				<input class="input" type="text" ng-model="vm.name">
+				<label class="label_inputs"> Category </label>
+				<input type="text" ng-model="vm.category">
+				<label class="label_inputs"> Price </label>
+				<input type="text" ng-model="vm.price">
+			</div>
+			<div class="buttons">
+				<button class="income" ng-click="vm.addIncome()">Income</button>
+				<button class="expense" ng-click="vm.addExpense()">Expense</button>
+			</div>
+			
+			
 		</div>
 	</div>
 </div>

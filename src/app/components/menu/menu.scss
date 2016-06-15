@@ -55,6 +55,10 @@
 	li.active {
 		font-weight: 900;
 		color: $green;
+		a {
+			color: $green;
+		}
+		
 		
 		// @media screen and (max-width:390px) {
 		// 	&:after {

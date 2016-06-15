@@ -1,3 +1,19 @@
+@keyframes show {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes out {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 .historycenter {
 	margin: 20px;
 	display: flex;
@@ -27,38 +43,108 @@
 		color: $green;
 
 	}
+
+
 }
 
 .add_panel_background {
 	width: 100vw;
-	height: 100vh;
+	height: 100%;
 	top: 0;
 	left: 0;
 	position: absolute;
 	background-color: rgba(0,0,0, 0.5);
 	z-index:1;
 
+
 	&.hidden {
-		display: none;
+		display: none;	
 	}
 }
 
 
 .add_form {
-	width: 80vw;
-	height: 80vw;
+	width: 50vw;
+	height: 80vh;
 	position: absolute;
-	top: 10vw;
-	left: 10vw;
+	top: 10vh;
+	left: 25vw;
 	z-index: 2;
 	background-color: #fff;
 	opacity: 1;
 	border-radius: 20px;
+	animation-duration: 0.5s;
+    animation-name: show;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
 
 	span {
 		float: right;
 		font-size: 2em;
 		margin: 10px 10px 0 0;
+		&:hover {
+			transform: scale(1.1);
+			color: $red;
+		}
+	}
+
+	@media (max-width: 778px) {
+		width: 90vw;
+		left: 5vw;
 	}
 
 }
+
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 75px;
+	.inputs {
+		display: flex;
+		flex-direction: column;
+		width: 80%;
+		color: $text-color;
+		
+	}
+	.buttons {
+		position: absolute;
+		display: flex;
+		bottom: 0;
+		width: 100%;
+		color: white;
+	}
+
+	.label_inputs {
+		color: $text-color_light;
+		margin-top: 10px;
+	}
+
+
+}
+
+input {
+	border: none;
+	border-bottom: 1px solid #e3e3e3;
+	padding: 10px 0 5px 0;
+	outline: none;
+}
+
+button {
+	width: 50%;
+	border: 0;
+	padding: 25px 0;
+	margin: 0;
+
+	&.income {
+		border-bottom-left-radius: 20px;
+		background-color: $green;
+	}
+
+	&.expense {
+		border-bottom-right-radius: 20px;
+		background-color: $red;
+	}
+}
+

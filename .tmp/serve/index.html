@@ -26,11 +26,12 @@
     <![endif]-->
 
     <div class="container">
-        <acme-navbar></acme-navbar>
-        <historycenter></historycenter>
-        <menu></menu>
+        
+        <div ui-view="acme-navbar"></div>
+        <div ui-view="historycenter"></div> 
+        <div ui-view="menu"></div> 
 
-        <div ui-view></div>
+        <div ui-view=""></div>
 
     </div>
 
@@ -67,7 +68,9 @@
     <script src="app/components/historyCenter/historycenter.directive.js"></script>
     <script src="app/components/githubContributor/githubContributor.service.js"></script>
     <script src="app/components/firebaseDataService/firebaseDataService.service.js"></script>
+    <script src="app/components/Auth/auth.service.js"></script>
     <script src="app/main/main.controller.js"></script>
+    <script src="app/login/login.controller.js"></script>
     <script src="app/index.run.js"></script>
     <script src="app/index.route.js"></script>
     <script src="app/index.constants.js"></script>
